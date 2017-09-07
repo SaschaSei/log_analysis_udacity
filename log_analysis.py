@@ -78,9 +78,6 @@ def create_view(view):
         db.commit()
         db.close()
         print "{} view created".format(view[0])
-    else:
-        print "{} view found".format(view[0])
-
 
 def check_for_view(view_name):
     db, cursor = connect_to_DB()
@@ -95,7 +92,7 @@ if __name__ == '__main__':
     create_view(view_one)
     create_view(view_two)
 
-    
+
     # Get data to print out.
     top_three_articles = get_query_results(query_1)
     most_popular_authors = get_query_results(query_2)

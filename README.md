@@ -24,4 +24,5 @@ a database provided by Udacity and outputs three pieces of data.
 $ vagrant up
 $ vagrant ssh
 ```
--
+- navigate to the folder with the repo and the database and launch the file:
+log_analysis.py
