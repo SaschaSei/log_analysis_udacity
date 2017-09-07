@@ -1,7 +1,14 @@
 # Log Analysis for Udacity Full Stack Web Dev
 
 This program is written for the Udacity Full Stack Web Dev Nanodegree. It uses
-a database provided by Udacity and outputs three pieces of data.
+a database provided by Udacity and outputs three pieces of data. The database is a
+collection of articles, authors and server logs.
+
+## Output
+My program will ouput:
+- a list of the three most viewd articles
+- a list of the most viewd authors and
+- the dates when 1% or more of the server requests resulted in errors 
 
 ## Prerequisits
 - the program is written in Python 3.6.2 downloadable [here](https://www.python.org/downloads/)
