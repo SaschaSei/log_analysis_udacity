@@ -35,5 +35,19 @@ $ vagrant ssh
 - navigate to the folder with the repo and the database and launch the file:
 log_analysis.py
 
+### Views
 On the first run the program will create two views in the database.
 One that shows the daily server request errors and on that shows the daily requests.
+- daily_error_count:
+```sh
+create view daily_error_count as select cast(time as date), status, count(*)
+from log where log.status like concat(4, '%')
+group by cast(time as date), status order by cast(time as date) desc;
+```
+
+- daily_request_count:
+```sh
+create view daily_request_count as select cast(time as date),
+count(*) from log group by cast(time as date)
+order by cast(time as date) desc;
+```
